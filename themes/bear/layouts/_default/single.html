@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article>
+{{ if eq .Type "blog" }}{{ if not .Params.menu }}
+<div class="meta">
+  <i>
+    <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+      {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }} / 
+    </time>
+  </i>
+
+  <p class="tags">
+    {{ range (.GetTerms "tags") }}
+    <a href="{{ .Permalink }}"><span class="hashtag">#</span>{{.LinkTitle }}</a>
+    {{ end }}
+  </p>
+</div>
+{{ end }}{{ end }}
+<content>
+  {{ .Content }}
+</content>
+</article>
+{{ end }}

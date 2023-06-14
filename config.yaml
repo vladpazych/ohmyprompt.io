@@ -1,0 +1,15 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: OhMyPrompt
+theme: bear
+copyright: © Vlad Pazych
+menu:
+  main:
+  - identifier: about
+    name: About
+    weight: 10
+    url: /about
+  # - identifier: blog
+  #   name: Blog
+  #   weight: 11
+  #   url: /blog
