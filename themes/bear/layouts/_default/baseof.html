@@ -38,6 +38,16 @@
   Simply place a custom_body.html into
   your local /layouts/partials-directory -->
   {{- partial "custom_body.html" . -}}
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKVEPY0W3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5PKVEPY0W3');
+  </script>
 </body>
 
 </html>
